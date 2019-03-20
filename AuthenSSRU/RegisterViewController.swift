@@ -13,8 +13,15 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
     } //Main Method
+    
+    
+    @IBAction func uploadButton(_ sender: UIBarButtonItem) {
+    }
+    
+    
     
     
     @IBAction func backButton(_ sender: UIBarButtonItem) {
