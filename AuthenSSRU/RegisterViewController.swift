@@ -48,6 +48,7 @@ class RegisterViewController: UIViewController {
             myAlert(titleString: "Have Space", messageString: "Please Fill All Blank")
         } else{
             
+            uploadData(name: name, user: user, password: password)
         }
         
         
@@ -70,7 +71,28 @@ class RegisterViewController: UIViewController {
     
     func uploadData(name:String,user:String,password:String) -> Void {
         
-        let urString: String = "http://androidthai.in.th/snru/addDataPrimmy.php?isAdd=true&Name=\(name)&User=\(user)&Password=\(password)"
+        let urlString: String = "https://androidthai.in.th/snru/addDataPrimmy.php?isAdd=true&Name=\(name)&User=\(user)&Password=\(password)"
+        
+        let url = URL(string: urlString)
+        let request = NSMutableURLRequest(url: url!)
+        let task = URLSession.shared.dataTask(with: request as URLRequest){data,response,error in
+            
+            if error != nil {
+                print("Error")
+            } else {
+                
+                if let testData = data{
+                    
+                    
+                    let canReadData = NSString(data: testData, encoding: String.Encoding.utf8.rawValue)
+                    print("canRead ==> \(String(describing:canReadData))")
+                    
+                }
+                
+            } //if1
+            
+        }//end Task
+        task.resume()
         
         
         
