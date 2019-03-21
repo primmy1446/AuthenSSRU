@@ -127,6 +127,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WallpaperGalaxy" translatesAutoresizingMaskIntoConstraints="NO" id="2FJ-Rq-WtU">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2NZ-VM-D7Z">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -171,15 +175,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WallpaperGalaxy" translatesAutoresizingMaskIntoConstraints="NO" id="2FJ-Rq-WtU">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Awx-eM-Pjg"/>
                     </view>
                     <connections>
+                        <outlet property="nameTextField" destination="kYO-mT-j6a" id="B40-Vl-3kt"/>
+                        <outlet property="passwordTextField" destination="I1n-BY-kzz" id="TXh-D3-Hzx"/>
+                        <outlet property="userTextField" destination="n4a-eG-7tf" id="DFC-hU-coZ"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="BackMain" id="q4B-I7-X7X"/>
                     </connections>
                 </viewController>
